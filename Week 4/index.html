@@ -3,26 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=initial-scale=1.0">
     <meta name="author" content="Samuel Murray">
-    <title>HTML JS Lab css and positioning</title>
+    <title>town of springfield</title>
+
     <style>
-        h1{ font-family: Arial, Helvetica, sans-serif;}
-        #container{background-color: blueviolet;border: 1px solid red; width: 1000px;height: 2000px;padding: 10px;margin-left: 400px;}
-
-
-
-
+        #main{ width: 1000px; height: 800px; background-color: azure;border: 1px solid black; border-radius: 20px; box-shadow: 5px 0px 5px black;}
+        body,html{display: flex; justify-content: center;background-color: aquamarine;margin: 0px;}
+        #header{text-align: center; font-family: 'Courier New', Courier, monospace;}
+        #nav{text-align: center; border-bottom: 1px solid black;}
+        .nav-list{ list-style: none;display: inline; text-align: center; padding: 15px;}
+        #content{height: 600px;}
+        #footer{text-align: center; border-top: 1px solid black; font-family: 'Courier New', Courier, monospace;}
+        .section-header{padding-left: 25px;}
+        .section-text{width: 580px; padding-left: 20px; float: left;}
+        .section-image{float: left;}
     </style>
+
 </head>
 <body>
-    <div id="container">
-        <h1 id="header">welcome to lab on positioning</h1>
-        <div id="nav"></div>
-        <div id="Left"></div>
-        <div id="right"></div>
-        <div id="footer"></div>
+    <div id="main">
+        <div id="header"><h1>Town of Springfield</h1></div>
+
+    
+    <!--Navagation-->
+        <div id="nav">
+            <ul>
+                <li class="nav-list"><a href="#">home</a></li>
+                <li class="nav-list"><a href="#">About Springfield</a></li>
+                <li class="nav-list"><a href="#">Pictures of Springfield</a></li>
+                <li class="nav-list"><a href="#">Contact Springfield</a></li>
+            </ul>
+        
+        </div>
+        <div id="content">
+            <!--content goes here-->
+
+            <h2 id="section-header"> welcome to the town of Springfield Home Page!</h2>
+            <p class="section-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum molestias doloribus, earum inventore esse beatae voluptate aliquid, laboriosam, repellat nostrum ullam odit ad nemo pariatur excepturi repudiandae corrupti quas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nihil vitae corrupti, asperiores, nulla earum a tempore quaerat itaque nam perferendis culpa aliquam ullam velit! Commodi dolore beatae vel officia. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus odio deleniti, dolorem obcaecati, provident consequuntur atque velit aspernatur libero delectus quae voluptatem minus tempore distinctio! Optio assumenda recusandae blanditiis consequatur.</p>
+            <img class="section-image" src="images/springfield.jpg" alt="town of springfield" width="380px">
+
+        </div>
+        <div id="footer">
+            <p>&copy; html & JS winter 2024 and town of Springfield</p>
+        </div>
     </div>
+
 
 </body>
 </html>
