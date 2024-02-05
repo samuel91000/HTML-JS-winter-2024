@@ -1,6 +1,6 @@
 #main{ width: 1000px; height: 800px; background-color: azure;border: 1px solid black; border-radius: 20px; box-shadow: 5px 0px 5px black;}
 body,html{display: flex; justify-content: center;background-color: aquamarine;margin: 0px;}
-#header{text-align: center; font-family: 'Courier New', Courier, monospace;}
+#header{text-align: center; font-family: 'Protest Riot', sans-serif;}
 #nav{text-align: center; border-bottom: 1px solid black;}
 .nav-list{ list-style: none;display: inline; text-align: center; padding: 15px;}
 #content{height: 600px;}
