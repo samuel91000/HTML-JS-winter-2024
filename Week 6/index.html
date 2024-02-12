@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Murray">
+    <title>classs work 2/12/2024</title>
+</head>
+<body>
+    <h1 id="header">javascript exsamples</h1>
+    <button>Change the page</button>
+    <button id="promptButton">press the button!</button>
+    <!--in doc JS-->
+    <script>
+        var name= "Samuel";
+        var lastName= "Murray";
+        var  message= `Hello wellcome to JS lesson ${name}`;
+        outputToConsole(message);
+        alert(message);
+        var message2= "Hello "+ name + " " + lastName + " welcome";
+        outputToConsole(message2);
+
+        var addProb = 12 + 4;
+        outputToConsole(addProb);
+
+        function outputToConsole(data){
+            console.log(data);
+        }
+
+        var myButton= document.querySelector("button");
+        myButton.addEventListener("click",changePage);
+
+        function changePage(){
+        document.getElementById("header").innerHTML = message;
+        document.querySelector("body").style.background = "#699020";            
+        }
+
+        var youName = prompt("please enter your name.");
+        document.querySelector("h1").innerHTML = `Hello ${youName} thanks for entering your name`;
+
+
+        var dataPromptButton = document.getElementById("promptButton");
+        dataPromptButton.addEventListener("click", dataPrompt)
+
+        function dataPrompt(){
+            alert(`My name is ${name}`)
+            var yourName = prompt("please tell me your name")
+            alert(`Hello ${yourName}, nice to meet you.`)
+
+            var yourLastName = prompt("what is your last name")
+            alert(`Great your full name is ${yourName} ${yourLastName}!`)
+
+            var firstNumber = prompt("Lets add some numbers. what is the first number tto add?")
+            var secondNumber = prompt("ender secound number")
+
+            var result = Number(firstNumber) + Number(secondNumber)
+
+            alert(`the ans is ${result}`)
+
+            var documentBody = document.querySelector('body')
+
+            var outputData = documentBody.createElement('p')
+
+            outputData.innerHTML = `Your name is ${yourName} ${yourLastName} <br> The result of your last name is ${result} <br> Thanks from ${name} ${lastName}`
+            documentBody.appendChild(outputData)
+        }
+    </script>
+
+
+</body>
+</html>
