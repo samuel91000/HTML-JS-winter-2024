@@ -60,7 +60,7 @@
 
             var documentBody = document.querySelector('body')
 
-            var outputData = documentBody.createElement('p')
+            var outputData = document.createElement('p')
 
             outputData.innerHTML = `Your name is ${yourName} ${yourLastName} <br> The result of your last name is ${result} <br> Thanks from ${name} ${lastName}`
             documentBody.appendChild(outputData)
