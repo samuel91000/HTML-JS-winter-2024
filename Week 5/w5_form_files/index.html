@@ -15,8 +15,9 @@
 <body>
     <!--Build your Table and Form here-->
     <h1>Birth Day Party request form</h1>
-    <table>
-        <thead>
+    <form action="confirm.html" method="get">
+        <table>
+            <thead>
             <tr>
                 <td>
                     <p>Lables</p>
@@ -29,26 +30,27 @@
         <tbody>
             <tr>
                 <td>
-                    <p>Parent/Guardian Name</p>
+                    <label for="g-first">Parent/Guardian Name</label>
                 </td>
                 <td>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Child's First Name</p>
-                </td>
-                <td>
-                    
+                    <input type="text" required maxlength="20" name="gfirst" id="g-first" placeholder="First Name"><br>
+                    <input type="text" required maxlength="20" name="glast" id="g-last" placeholder="Last Name">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Child's Age</p>
+                    <label for="c-first">Child's First Name</label>
                 </td>
                 <td>
-                    
+                    <input type="text" required name="cfirst" id="cfirst" placeholder="Child's First Name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Child's Age</label>
+                </td>
+                <td>
+                    <input type="number" required name="age" id="age" value="3">
                 </td>
             </tr>
             <tr>
@@ -61,26 +63,26 @@
             </tr>
             <tr>
                 <td>
-                    <p>Date</p>
+                    <label for="date">Date</label>
                 </td>
                 <td>
-                    
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>Start Time</p>
-                </td>
-                <td>
-                    
+                    <input type="date" required name="date" id="date">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Number of guests</p>
+                    <label for="time">Start Time</label>
                 </td>
                 <td>
-                    
+                    <input type="time" required name="time" id="s-time">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="guests">Number of guests</label>
+                </td>
+                <td>
+                    <input type="number" name="guests" value="5">
                 </td>
             </tr>
             <tr>
@@ -93,10 +95,16 @@
             </tr>
             <tr>
                 <td>
-                    <p>Size</p>
+                    <label for="size">Size</label>
                 </td>
                 <td>
-                    
+                    <input type="radio" name="size" value="sm" id="sm">
+                    <label for="sm">sm</label>
+                    <input type="radio" name="size" value="md" id="md">
+                    <label for="md">med</label>
+                    <input type="radio" name="size" value="lg" id="lg">
+                    <label for="lg">lg</label>
+
                 </td>
             </tr>
             <tr>
@@ -104,15 +112,24 @@
                     <p>Drinks</p>
                 </td>
                 <td>
-                    
+                    <input type="checkbox" name="drink1" id="drink1" value="coke"><label for="drink1">Coke</label><br>
+                    <input type="checkbox" name="drink2" id="drink2" value="Sprite"><label for="drink2">Sprite</label><br>                
+                    <input type="checkbox" name="drink3" id="drink3" value="fruit punch"><label for="drink3">fruit punch</label><br>
+                    <input type="checkbox" name="drink4" id="drink4" value="lemonade"><label for="drink4">lemonade</label><br>
+                    <input type="checkbox" name="drink5" id="drink5" value="iced tea"><label for="drink5">Iced Tea</label><br>
+
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Cake</p>
+                    <label for="cake">Cake</label>
                 </td>
                 <td>
-                    
+                    <select name="cake" id="cake">
+                        <option>Chocolate</option>
+                        <option>Vanilla</option>
+                        <option>I'll bring my own</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -125,18 +142,19 @@
             </tr>
             <tr>
                 <td>
-                    <p>Color Scheme</p>
+                    <label for="colors">Color Scheme</label>
                 </td>
                 <td>
-                    
+                    <p>Choose a color scheme for the party</p>
+                    <input type="color" name="colors" id="colors">
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p>Additional Comments</p>
+                    <label for="comments">Additional Comments</label>
                 </td>
                 <td>
-                    
+                    <textarea placeholder="Please add any additional comments here" name="comments" id="comments"></textarea>
                 </td>
             </tr>
             <tr>
@@ -144,12 +162,14 @@
 
                 </td>
                 <td>
-                    <button>Submit</button>
+                    <input type="submit" value="Submit">
                 </td>
             </tr>
         </tbody>
+        </table>
+        
 
-    </table>
+    </form>
 
 
 
