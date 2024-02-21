@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel">
+    <title>Pay calulator one</title>
+</head>
+<body>
+    
+
+    <script>
+        # Var Derectory
+
+pay = 14.50
+hours = 32
+taxRate = .20
+totalPay = 0.00
+tax = 0.00
+actualPay = 0.00
+
+# Code Start
+
+totalPay = pay * hours
+totalPay = totalPay * 2                    # con== weeks worked
+
+print ("     Gross pay= ","{0:10.2f}".format (totalPay))
+
+tax = totalPay * taxRate
+
+print ("     tax=       ","{0:10.2f}".format(tax))
+
+actualPay = totalPay - tax
+
+print ("     net pay=   ","{0:10.2f}".format(actualPay))
+print()
+print("Have a nice day")
+
+# Code End
+
+    </script>
+
+</body>
+</html>
