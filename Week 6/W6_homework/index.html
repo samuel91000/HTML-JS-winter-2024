@@ -11,33 +11,35 @@
     
 
     <script>
-        # Var Derectory
+        // Var Derectory
 
-pay = 14.50
-hours = 32
-taxRate = .20
-totalPay = 0.00
-tax = 0.00
-actualPay = 0.00
+        var pay = 0
+        var hours = 0
+        var taxRate = .20
+        var totalPay = 0.00
+        var tax = 0.00
+        var actualPay = 0.00
 
-# Code Start
+        // Getting data
+        pay = prompt("How much is you empolyee payed?")
+        console.log(`pay per hour= ${pay}`)
+        hours = prompt("How many hours did thay work")
+        console.log(`hours worked= ${hours}`)
 
-totalPay = pay * hours
-totalPay = totalPay * 2                    # con== weeks worked
+        // Calculation Start
 
-print ("     Gross pay= ","{0:10.2f}".format (totalPay))
+        totalPay = pay * hours   
+        tax = totalPay * taxRate
+        actualPay = totalPay - tax
 
-tax = totalPay * taxRate
+        alert(`Gross pay= ${totalPay}`+'\n'+`tax= ${tax}`+'\n'+`net pay= ${actualPay}`)
+        
+        console.log(`Gross pay= ${totalPay}`)
+        console.log(`tax= ${tax}`)
+        console.log(`net pay= ${actualPay}`)
 
-print ("     tax=       ","{0:10.2f}".format(tax))
+        alert("Have a nice day")
 
-actualPay = totalPay - tax
-
-print ("     net pay=   ","{0:10.2f}".format(actualPay))
-print()
-print("Have a nice day")
-
-# Code End
 
     </script>
 
