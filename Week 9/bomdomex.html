@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Murray">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>BOM and DOM lab</h1>
+    <div id="output"></div>
+    <p class="names">Jay</p>
+    <h2 class="names">Katie</h2>
+    <div class="names">Marty</div>
+    <script>
+
+        // var div = document.querySelector(`#output`)
+        // var p = document.createElement(`p`)
+        // p.setAttribute(`id`, `some-id`)
+
+        // var text = document.createTextNode(`This is text inside of the p tag`)
+
+        // p.appendChild(text)
+        // div.appendChild(p)
+
+
+        // div.removeChild(p)
+
+        var names = document.querySelectorAll(`.names`)
+        console.log(names)
+
+        for(let i=0; i < names.length; i++)
+        {
+        names[i].style.color = `red`
+    //makes all of the elements with a .names class turn red.
+         }
+
+    </script>
+
+
+</body>
+</html>
