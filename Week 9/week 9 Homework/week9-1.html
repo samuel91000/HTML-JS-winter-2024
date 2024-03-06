@@ -27,22 +27,24 @@
 		let div = document.createElement(`div`)
 		div.setAttribute(`border`, `5px`)
 		div.setAttribute(`id`, `div${i}`)
-		body.appendChild()
+
 
 		let pFirst = document.createElement(`p`)
 		let pLast = document.createElement(`p`)
 		let pFilm = document.createElement(`p`)
 
-		let textF = document.createTextNode(`First name= ${people[i,first]}`)
+		let textF = document.createTextNode(`First name= ${people[i].first}`)
 		console.log(textF)
-		let textL = document.createTextNode(`Last name= ${people[i,last]}`)
+		let textL = document.createTextNode(`Last name= ${people[i].last}`)
 		console.log(textL)
-		let textM = document.createTextNode(`Film name= ${people[i,credit]}`)
+		let textM = document.createTextNode(`Film name= ${people[i].credit}`)
 		console.log(textM)
 
 		pFirst.appendChild(textF)
 		pLast.appendChild(textL)
 		pFilm.appendChild(textM)
+
+		
 	}
 	
 </script>
