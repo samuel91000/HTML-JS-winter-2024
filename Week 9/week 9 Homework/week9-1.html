@@ -7,13 +7,9 @@
 	.border{border:1px solid black;}
 </style>
 </head>
-
-<body>
-</body>
-
 <script type="text/javascript">
-	//Use this Array of objects to complete the assignment.
-	var people =[
+	window.onload = function(){
+		var people =[
 		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
 		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
 		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
@@ -21,32 +17,55 @@
 		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
 		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
 		{first:"Marion", last:"Cobretti", credit:"Cobra" }
-	]
+		]
 
-	for(let i=0; i<people.length; i++ ){
-		let div = document.createElement(`div`)
-		div.setAttribute(`border`, `5px`)
-		div.setAttribute(`id`, `div${i}`)
+		var body = document.querySelector('body')
+
+		for(let i=0; i<people.length; i++ ){
+
+			let div = document.createElement(`div`)
+			div.setAttribute(`style`,`border:1px solid black`)
+			div.setAttribute(`id`, `div${i}`)
 
 
-		let pFirst = document.createElement(`p`)
-		let pLast = document.createElement(`p`)
-		let pFilm = document.createElement(`p`)
+			let pFirst = document.createElement(`p`)
+			let pLast = document.createElement(`p`)
+			let pFilm = document.createElement(`p`)
 
-		let textF = document.createTextNode(`First name= ${people[i].first}`)
-		console.log(textF)
-		let textL = document.createTextNode(`Last name= ${people[i].last}`)
-		console.log(textL)
-		let textM = document.createTextNode(`Film name= ${people[i].credit}`)
-		console.log(textM)
+			let textF = document.createTextNode(`First name= ${people[i].first}`)
+			console.log(textF)
+			let textL = document.createTextNode(`Last name= ${people[i].last}`)
+			console.log(textL)
+			let textM = document.createTextNode(`Film name= ${people[i].credit}`)
+			console.log(textM)
 
-		pFirst.appendChild(textF)
-		pLast.appendChild(textL)
-		pFilm.appendChild(textM)
+			pFirst.appendChild(textF)
+			pLast.appendChild(textL)
+			pFilm.appendChild(textM)
+
+
+			div.appendChild(pFirst)
+			div.appendChild(pLast)
+			div.appendChild(pFilm)
+
+			body.appendChild(div)
+
 
 		
+
+
+
+		}
+		
 	}
+	//Use this Array of objects to complete the assignment.
+
 	
 </script>
+<body>
+
+</body>
+
+
 
 </html>
