@@ -44,7 +44,8 @@
 		var people = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		var run = document.querySelector('#button')
+		run.addEventListener(`click`, calcAndDisplay())
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -63,6 +64,7 @@
 
 		function calcAndDisplay(e)
 		{
+			console.log('hello')
 			//Create an object called person.
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
@@ -101,7 +103,7 @@
 			
 
 			//Loop through the objects in the people array
-			for()
+			for(let i =0; i< people.length; i++)
             {
 
 				//Loop through each property in the object
