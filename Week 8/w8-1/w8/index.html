@@ -37,8 +37,8 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var first = document.getElementById("first").value
-		var last = document.getElementById("last").value
+		var first = document.querySelector("#first")
+		var last = document.querySelector("#last")
 
 
 		//Make an array to store the people
@@ -72,10 +72,8 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: `${first}`,
-				last: `${last}`
-
-
+				first: `${first.value}`,
+				last: `${last.value}`
 
             }//end of person object
 
